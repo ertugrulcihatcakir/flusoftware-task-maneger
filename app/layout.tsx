@@ -2,8 +2,9 @@ import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 import './globals.css'
 import Sidebar from './Components/Sidebar/Sidebar'
-import GlobalStylesProvider from './providers/GlobalStylesProvider'
+import GlobalStylesProvider from './providers/GlobalStyleProvider'
 import ContextProvider from './providers/ContextProvider'
+import NextTopLoader from 'nextjs-toploader';
 import { ClerkProvider, auth } from '@clerk/nextjs'
 
 
@@ -38,6 +39,11 @@ export default function RootLayout({
           />
         </head>
         <body className={inter.className}>
+          <NextTopLoader
+            height={2}
+            color='turquoise'
+            easing='cubic-bezier(.27,.16,.65,.95)'
+          />
           <ContextProvider>
             <GlobalStylesProvider>
               {userId && <Sidebar/>}

@@ -1,5 +1,6 @@
 "use client"
 
+import { useGlobalState } from '@/app/context/globalProvider';
 import axios from 'axios';
 import React, { useState } from 'react'
 import toast from 'react-hot-toast';
@@ -11,6 +12,8 @@ function CreateContent() {
     const [completed, setCompleted] = useState(false);
     const [important, setImportant] = useState(false);
     
+    const { theme, allTasks, closeModal } = useGlobalState();
+
     const handleChange = (name: string) => (e: any) => {
         switch(name){
             case "title":
@@ -94,7 +97,7 @@ function CreateContent() {
         <div className="input-control toggler">
             <label htmlFor="completed">Toggle Completed</label>
             <input
-                
+                value={completed.toString()}
                 onChange={handleChange("completed")}
                 type="checkbox"
                 name="completed"

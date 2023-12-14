@@ -22,14 +22,14 @@ function Button({
     icon,
     name,
     background,
+    border,
+    color,
     padding,
     borderRad,
     fw,
     fs,
     click,
     type,
-    border,
-    color,
   }: Props) {
 
     const { theme } = useGlobalState();

@@ -5,6 +5,7 @@ import React from "react";
 import styled from 'styled-components';
 import TaskItem from "../TaskItem/TaskItem";
 import { plus } from "@/app/utilis/Icons";
+import CreateContent from "../Models/CreateContent";
 
 interface Props{
     title: string;
@@ -12,7 +13,7 @@ interface Props{
 }
 
 function Tasks({ title, tasks }: Props){
-    const { theme, } = useGlobalState ();
+  const { theme, isLoading } = useGlobalState();
 
     return (
         <TaskStyled theme={theme}>

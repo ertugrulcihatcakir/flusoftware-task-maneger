@@ -12,15 +12,10 @@ import { logout } from '@/app/utilis/Icons';
 import { useClerk } from '@clerk/nextjs';
 
 function Sidebar() {
-
-  
   const { theme } = useGlobalState();
   const { signOut } = useClerk();
-
   const router = useRouter();
   const pathname = usePathname();
-
-  
   const handleClick = (link: string) => {
     router.push(link);
   };
@@ -218,13 +213,15 @@ const SidebarStyled = styled.nav`
     }
   }
 
+  > button {
+      margin: 1.5rem;
+  }
+  
   .active::before {
     width: 0.3rem;
   }
 
-  > button {
-    margin: 1.5rem;
-  }
+  
   
 `;
 
