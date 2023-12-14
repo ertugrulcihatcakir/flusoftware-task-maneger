@@ -12,6 +12,7 @@
     "@clerk/nextjs": "^4.27.5",
     "@prisma/client": "^5.7.0",
     "axios": "^1.6.2",
+    "moment": "^2.29.4",
     "next": "14.0.4",
     "prisma": "^5.7.0",
     "react": "^18",

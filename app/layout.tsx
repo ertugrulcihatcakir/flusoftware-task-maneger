@@ -7,12 +7,15 @@ import ContextProvider from './providers/ContextProvider'
 import { ClerkProvider, auth } from '@clerk/nextjs'
 
 
-const inter = Inter({ subsets: ['latin'] })
+const inter = Inter({ 
+  subsets: ['latin'],
+  weight: ["400","500","600","700","800"] 
+});
 
 export const metadata: Metadata = {
   title: 'fluSoftware Task Maneger',
   description: 'Task Maneger',
-}
+};
 
 export default function RootLayout({
   children,
