@@ -41,19 +41,15 @@ export const GlobalProvider = ({ children }) => {
     };
     
     const deleteTask = async (id) => {
-        try {
-
-          const res = await axios.delete(`/api/tasks/${id}`);
-          toast.success("Task deleted");
-    
-          allTasks();
-
-        } catch (error) {
-
-          console.log(error);
-          toast.error("Something went wrong");
-
-        }
+      try {
+        const res = await axios.delete(`/api/tasks/${id}`);
+        toast.success("Task deleted");
+  
+        allTasks();
+      } catch (error) {
+        console.log(error);
+        toast.error("Something went wrong");
+      }
     };
 
     const updateTask = async (task) => {
@@ -69,6 +65,9 @@ export const GlobalProvider = ({ children }) => {
         }
     };
 
+    const completedTasks = tasks.filter((task) => task.isCompleted === true);
+    const importantTasks = tasks.filter((task) => task.isCompleted === true);
+    const incompleteTasks = tasks.filter((task) => task.isCompleted === false);
 
     React.useEffect(() => {
         if (user) allTasks();
@@ -81,6 +80,9 @@ export const GlobalProvider = ({ children }) => {
             deleteTask,
             updateTask,
             isLoading,
+            completedTasks,
+            importantTasks,
+            incompleteTasks,
         }}>
         <GlobalUpdateContext.Provider value={{}}>
             {children}

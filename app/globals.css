@@ -65,3 +65,7 @@ body {
     opacity: 0;
   }
 }
+
+.cl-userButtonPopoverFooter, .cl-internal-b3fm6y{
+  display: none !important;
+}

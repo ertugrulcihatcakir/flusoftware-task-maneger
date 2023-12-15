@@ -33,7 +33,7 @@ const themes = [
     borderColor: "rgba(249,249,249, 0.08)",
     borderColor2: "rgba(249,249,249, 0.08)",
     shadow7: "1px 7px 12px rgba(8, 18, 69, 0.1)",
-    sidebarWidth: "15rem",
+    sidebarWidth: "20rem",
     sidebarCollapsed: "5.4rem",
     fH4: "19px",
     fontSmall: "14px",
@@ -116,7 +116,7 @@ const themes = [
     shadow5: "0px 4px 0px rgba(249,249,249, 0.35)",
     shadow6:
     "0px 6px 20px rgba(0, 0, 0, 0.15), 0px -3px 20px rgba(0, 0, 0, 0.1)",
-    sidebarWidth: "15rem",
+    sidebarWidth: "20rem",
     sidebarCollapsed: "5.4rem",
     fH4: "19px",
     fontSmall: "14px",

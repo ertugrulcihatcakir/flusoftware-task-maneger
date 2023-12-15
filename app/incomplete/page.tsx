@@ -1,8 +1,12 @@
 "use client";
 import React from "react";
+import { useGlobalState } from "../context/globalProvider";
+import Tasks from "../Components/Tasks/Tasks";
 
 function page() {
-    return <div>Incomplete</div>
+  const { incompleteTasks } = useGlobalState();
+
+  return <Tasks title="Important Tasks" tasks={incompleteTasks} />;
 }
 
 export default page;
