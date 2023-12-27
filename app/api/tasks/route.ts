@@ -88,4 +88,4 @@ export async function PUT(req: Request) {
     console.log("ERROR UPDATING TASK: ", error);
     return NextResponse.json({ error: "Error deleting task", status: 500 });
   }
-}
+};
